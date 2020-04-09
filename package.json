@@ -1,0 +1,26 @@
+{
+    "name": "ie11-postmate",
+    "version": "1.0.0",
+    "description": "Webpack 4 + CoreJS 3 for IE11",
+    "main": "src/index.js",
+    "scripts": {
+        "build": "webpack --config webpack.dev.js --mode development"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/plugin-proposal-class-properties": "^7.8.3",
+        "@babel/plugin-proposal-decorators": "^7.8.3",
+        "@babel/preset-env": "^7.9.5",
+        "@babel/register": "^7.9.0",
+        "babel-loader": "^8.1.0",
+        "core-js": "^3.6.4",
+        "css-loader": "^3.5.1",
+        "file-loader": "^6.0.0",
+        "html-webpack-plugin": "^4.0.4",
+        "postmate": "^1.5.2",
+        "rimraf": "^3.0.2",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.10.3"
+    }
+}

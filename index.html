@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test</title>
+    <script src="dist/shim.js?v8"></script>
+    <style type="text/css">
+      body {
+        padding: 20px;
+      }
+
+      #child {
+        width: 100%;
+        height: 300px;
+        border: 1px dashed grey;
+        border-radius: 10px;
+      }
+
+      .my-iframe {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+
+<div id="child"></div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  console.log('Parent Loaded!');
+
+  let sym = Symbol('foo');
+
+  console.log("Child sym type = " + typeof(sym));
+
+  parentSetup();
+
+});
+
+</script>
+
+</body>
+</html>
