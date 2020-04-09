@@ -1,17 +1,6 @@
 import 'core-js/stable';
 window.Postmate = require('postmate/build/postmate.min.js');
 
-// document.addEventListener("DOMContentLoaded", () => {
-
-//   console.log('Loaded!');
-
-//   let sym = Symbol('foo');
-
-//   console.log(`sym type = ${typeof(sym)}`);
-
-// });
-
-
 window.parentSetup = function () {
   // Kick off the handshake with the iFrame
   const handshake = new Postmate({
@@ -25,7 +14,7 @@ window.parentSetup = function () {
   handshake.then(child => {
 
     // Fetch the height property in child.html and set it to the iFrames height
-    //child.get('height')
+    // child.get('height')
     //  .then(height => child.frame.style.height = `${height}px`);
 
     // Listen to a particular event from the child
@@ -42,6 +31,7 @@ window.childSetup = function() {
     height: () => document.height || document.body.offsetHeight
   });
 
+  // Helper function to get random colors
   function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
