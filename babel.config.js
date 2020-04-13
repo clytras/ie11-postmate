@@ -7,8 +7,8 @@ module.exports = function (api) {
         // modules: false,
         // corejs:"3.6.4",
         corejs:"3",
-        // useBuiltIns: 'usage',
-        useBuiltIns: 'entry',
+        useBuiltIns: 'usage',
+        // useBuiltIns: 'entry',
         targets: {
           browsers: [
             "edge >= 16",
