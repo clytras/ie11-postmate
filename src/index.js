@@ -1,4 +1,4 @@
-// import 'core-js/stable';
+import 'core-js/stable';
 window.Postmate = require('postmate/build/postmate.min.js');
 
 window.parentSetup = function () {

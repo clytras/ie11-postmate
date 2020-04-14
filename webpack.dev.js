@@ -5,12 +5,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: [
-          // /@babel(?:\/|\\{1,2})runtime|core-js/,
-          /node_modules/,
-          /\bcore-js\b/,
-          /\bwebpack\/buildin\b/
-        ],
+        exclude: /@babel(?:\/|\\{1,2})runtime|core-js/,
         use: {
           loader: 'babel-loader',
           options: {
