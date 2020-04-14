@@ -5,7 +5,10 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /@babel(?:\/|\\{1,2})runtime|core-js/,
+        exclude: [
+          /\bcore-js\b/,
+          /\bwebpack\/buildin\b/
+        ],
         use: {
           loader: 'babel-loader',
           options: {
@@ -19,7 +22,7 @@ module.exports = {
       },
     ],
   },
-  devtool:"cheap-source-map",
+  devtool: "cheap-source-map",
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'shim.js',

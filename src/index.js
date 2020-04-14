@@ -1,22 +1,16 @@
-import 'core-js/stable';
-window.Postmate = require('postmate/build/postmate.min.js');
+import Postmate from 'postmate';
 
 window.parentSetup = function () {
   // Kick off the handshake with the iFrame
   const handshake = new Postmate({
     container: document.getElementById('child'), // Element to inject frame into
-    url: 'child.html', // Page to load, must have postmate.js. This will also be the origin used for communication.
+    url: 'child.php', // Page to load, must have postmate.js. This will also be the origin used for communication.
     name: 'my-iframe-name', // Set Iframe name attribute. Useful to get `window.name` in the child.
     classListArray: ["my-iframe"] //Classes to add to the iframe via classList, useful for styling.
   });
 
   // When parent <-> child handshake is complete, data may be requested from the child
   handshake.then(child => {
-
-    // Fetch the height property in child.html and set it to the iFrames height
-    // child.get('height')
-    //  .then(height => child.frame.style.height = `${height}px`);
-
     // Listen to a particular event from the child
     child.on('some-event', data => console.log(data)); // Logs "Hello, World!"
     child.on('bg-color', color => {

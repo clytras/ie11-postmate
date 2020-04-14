@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Test</title>
-    <script src="dist/shim.js?v8"></script>
+    <script src="dist/shim.js?v=<?php echo time() ?>"></script>
     <style type="text/css">
       body {
         padding: 20px;

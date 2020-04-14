@@ -4,11 +4,12 @@ module.exports = function (api) {
     [
       '@babel/preset-env',
       {
-        // modules: false,
-        // corejs:"3.6.4",
-        corejs:"3",
-        // useBuiltIns: 'usage',
-        useBuiltIns: 'entry',
+        corejs : {
+          version : "3",
+          proposals : true
+        },
+        useBuiltIns: 'usage',
+        // useBuiltIns: 'entry',
         targets: {
           browsers: [
             "edge >= 16",
